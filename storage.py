@@ -37,6 +37,7 @@ class DBStorage():
         try:
             cursor.execute('INSERT INTO results (query, rank, link, title, snippet, html, created) VALUES(?,?,?,?,?,?,?)')
             self.connection.commit()
+            
         except sqlite3.IntegrityError:
             pass
 
