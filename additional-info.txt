@@ -4,4 +4,4 @@ Run the program with:
 Database things:
     sqlite3 links.db
     select * from results where relevance is not null;
-    select query, link, relevance, from results where relevance is not null;
+    select query, link, relevance from results where relevance is not null;
