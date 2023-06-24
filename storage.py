@@ -42,3 +42,9 @@ class DBStorage():
             pass
 
         cursor.close()
+
+    def update_relevance(self, query, link, relevance):
+        cursor = self.connection.cursor()
+        cursor.execute("UPDATE results SET relevance=? WHERE query=? AND link=?", [relevance, query, link])
+        self.connection.commit()
+        cursor.close()
